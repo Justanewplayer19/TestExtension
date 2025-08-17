@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "YT Auto Replay / Auto Refresh",
+  "version": "1.0.0",
+  "description": "On YouTube watch pages, loop the video or refresh the tab when it ends.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://m.youtube.com/*"
+  ],
+  "icons": {},
+  "action": {
+    "default_title": "YT Auto Replay",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/watch*",
+        "https://m.youtube.com/watch*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
