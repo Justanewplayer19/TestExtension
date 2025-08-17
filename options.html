@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>YT Auto Replay Options</title>
+  <style>
+    body { font: 14px system-ui, Arial; padding: 16px; max-width: 720px; }
+    .sec { margin-bottom: 16px; }
+    .row { display:flex; align-items:center; gap:8px; }
+  </style>
+</head>
+<body>
+  <h2>YT Auto Replay / Refresh</h2>
+  <div class="sec">
+    <div class="row">
+      <label for="enabled">Enabled</label>
+      <input id="enabled" type="checkbox">
+    </div>
+  </div>
+
+  <div class="sec">
+    <strong>Mode</strong><br>
+    <label><input type="radio" name="mode" value="loop"> Loop video</label><br>
+    <label><input type="radio" name="mode" value="refresh"> Refresh on end</label>
+  </div>
+
+  <div class="sec" id="delaySec">
+    <label for="delayMs">Refresh delay (ms)</label>
+    <input id="delayMs" type="number" min="0" step="100" value="0">
+  </div>
+
+  <p>This extension only activates on YouTube watch pages.</p>
+
+  <script src="options.js"></script>
+</body>
+</html>
